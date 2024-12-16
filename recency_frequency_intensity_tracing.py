@@ -67,7 +67,7 @@ plt.plot(range(N), scores, label='Scores over Time', color='blue')
 
 # Draw red lines for min-max of intensity and frequency
 plt.axhline(y=intensity_max_high, color='green', linestyle='--', label=f'Intensity Max for Highest Score: {intensity_max_high}')
-plt.axhline(y=intensity_max_low, color='green', linestyle='--', label=f'Intensity Max for Lowest Score: {intensity_max_low}')
+plt.axhline(y=intensity_max_low, color='green', linestyle='--', label=f'Intensity Min for Lowest Score: {intensity_max_low}')
 
 # Draw lines for overall min and max of the scores
 score_min = min(scores)
@@ -75,8 +75,8 @@ score_max = max(scores)
 
 print(f"score_max: {score_max}")
 print(f"score_min: {score_min}")
-plt.axhline(y=score_min, color='purple', linestyle='-', label=f'Overall Min: {score_min}')
 plt.axhline(y=score_max, color='purple', linestyle='-', label=f'Overall Max: {score_max}')
+plt.axhline(y=score_min, color='purple', linestyle='-', label=f'Overall Min: {score_min}')
 
 # Show the plot with labels
 plt.xlabel('Days')
